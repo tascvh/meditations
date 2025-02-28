@@ -15,5 +15,3 @@ export const parseChapterListString = (chapter_list) => {
 export const getChapterLink = (book, chapter) => { 
   return "/meditations-" + book + "-" + chapter
 } 
-
-// export const get_chapter_list_url = (chapter_list) => { return chapter_list;} 
