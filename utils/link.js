@@ -1,4 +1,3 @@
-
 export const parseChapterString = (chapter_string) => {
   return { 
     book : chapter_string.split("-")[0] ,
@@ -13,5 +12,5 @@ export const parseChapterListString = (chapter_list) => {
 } 
 
 export const getChapterLink = (book, chapter) => { 
-  return "/meditations-" + book + "-" + chapter
+  return "/section/" + book + "-" + chapter
 } 

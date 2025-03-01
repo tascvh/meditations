@@ -6,6 +6,7 @@
         <nuxt-link to="/">Home</nuxt-link>
         <nuxt-link to="/about">About</nuxt-link>
         <nuxt-link to="/contact">Contact</nuxt-link>
+        <nuxt-link to="/bookindex">Index</nuxt-link>
       </nav>
     </header>
     <main class="app-content">

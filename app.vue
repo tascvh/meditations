@@ -10,7 +10,6 @@ import { InitData } from '@/utils/data';
 export default {
   name: 'App',
   components: {
-    // HelloWorld
   },
    async created() {
      console.log("created app");

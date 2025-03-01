@@ -24,15 +24,9 @@ const add_book = (book_num, text, tags) => {
 }
 
 export const InitData = async () => {
+  console.log("init data")
   {
-    // const modulesContext = require.context('../data/glong', false, /\.js$/);
-
-    // modulesContext.keys().forEach(modulePath => {
-      // const module = modulesContext(modulePath);
-      // add_book(module.book, module.data, null);
-    // });
-
-    const modulesContext = import.meta.glob('../data/glong/*.js');
+    const modulesContext = import.meta.glob('./data/glong/*.js');
     for (const path in modulesContext) {
       modulesContext[path]().then((module) => {
         add_book(module.book, module.data, null);
@@ -40,14 +34,12 @@ export const InitData = async () => {
     }
   }
   {
-    // const modulesContext = require.context('../data/tags', false, /\.js$/);
-    //
-    // // Load each module dynamically
-    // modulesContext.keys().forEach(modulePath => {
-    //   const module = modulesContext(modulePath);
-    //   // console.log(module.data)
-    //   add_book(module.book, null,  module.tags);
-    // });
+    const modulesContext = import.meta.glob('./data/tags/*.js');
+    for (const path in modulesContext) {
+      modulesContext[path]().then((module) => {
+        add_book(module.book, null, module.tags);
+      });
+    }
   }
 }
 
@@ -72,7 +64,14 @@ export const fetchTags = () => {
   });
 }
 export const fetchMeta = () => {
+
+  console.log(data)
   return new Promise((resolve) => {
+    // resolve({
+    //   data: [ {len : 2}, {len : 3} ],
+    // });
+    // return
+
     const retval = {
       books : [],
     }
