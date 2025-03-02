@@ -1,5 +1,5 @@
 <template>
-  <div class="card-elegant">
+  <div v-if="p_data" class="card-elegant">
     <h3>Book {{ p_data.book }} Chapter {{ p_data.chapter }}</h3>
     <div class="verse-content">
       <!-- <p >{{ p_data.text }}</p> -->

@@ -4,8 +4,8 @@
     <header class="app-content-header">
       <nav class="right-aligned">
         <nuxt-link to="/">Home</nuxt-link>
-        <nuxt-link to="/about">About</nuxt-link>
-        <nuxt-link to="/contact">Contact</nuxt-link>
+        <nuxt-link to="/tags">Tags</nuxt-link>
+        <nuxt-link to="/contact">My Collections</nuxt-link>
         <nuxt-link to="/bookindex">Index</nuxt-link>
       </nav>
     </header>
