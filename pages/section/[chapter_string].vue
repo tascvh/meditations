@@ -16,6 +16,9 @@
       <div class="bordered-link"  >Show Collections</div>
     </div>
     <TagList v-if="show_tags" :tag_list="chapter_data.tags" />
+
+  <Collections :chapterLoc="xx"/>
+
   </div>
 
   <ChapterListView :chapter_list="chapter_list" />
@@ -30,6 +33,7 @@ import { parseChapterString } from "../utils/link"
 import { parseChapterListString } from "../utils/link"
 import { getChapterLink } from "../utils/link"
 import  TagList from "~/components/TagList.vue";
+import  Collections from "~/components/Collections.vue";
 
 const route = useRoute();
 
@@ -37,6 +41,8 @@ const fetchData = async ()=> {
   console.log("fd");
 
   const c = parseChapterListString(route.params.chapter_string);
+    xx.value = parseChapterListString(route.params.chapter_string)[0];
+    console.log("xx", xx)
 
   if (c.length != 1) { 
     chapter_list.value = c;
@@ -65,14 +71,23 @@ const fetchData = async ()=> {
   }
 }
 
+const xy = ref({book :1 , chapter:1})
+const xx = ref({book :1 , chapter:1})
 onMounted(async () => {
   await fetchData();
 });
 
 
+const chapter_obj = ref({book:1,chapter:1});
+// const chapter_obj = ref(null);
+// computed(() => {
+// });
+
 watch(
+  // () => route.params.chapter_string,
   () => route.params.chapter_string,
   async (old_val, new_val) => {
+    console.log("co", chapter_obj)
     await fetchData();
   }
 );
