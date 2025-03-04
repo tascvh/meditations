@@ -1,0 +1,1 @@
+import{T as s}from"./H5OyosYD.js";import{r as e,p as o,J as n,q as c,s as i,o as l}from"./BunUn4iA.js";import"./BWueSjaD.js";const g={__name:"index",setup(p){const r=e([]);return o(async()=>{try{{const t=await(await n()).data;t.length&&(r.value=t)}}catch(a){console.error("XX Error fetching data:",a)}}),(a,t)=>(l(),c(s,{tag_list:i(r)},null,8,["tag_list"]))}};export{g as default};
