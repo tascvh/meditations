@@ -273,7 +273,7 @@
     }
 
     .table tr:hover {
-      background-color: var(--background-secondary);
+      /* background-color: var(--background-secondary); */
     }
 
     /* Code block */
@@ -291,4 +291,20 @@
     .text-center { text-align: center; }
     .mb-2 { margin-bottom: 0.5rem; }
     .mb-4 { margin-bottom: 1rem; }
-    .text-secondary { color: var(--text-secondary); }
+    .text-secondary { color: var(--text-secondary); 
+    }
+
+
+    .bordered-link {
+    text-decoration: none; /* Remove underline */
+    /* color: #007BFF;  */
+    padding: 5px 15px; /* Padding around the link */
+    border: 2px solid #007BFF; /* Border color and thickness */
+    border-radius: 5px; /* Rounded corners */
+    border-color : var(--border-color) ;
+    display: block; 
+        width: fit-content; /* Make the link only as wide as its content */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+    margin-right:10px;
+    cursor: pointer;
+  }

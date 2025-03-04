@@ -123,17 +123,4 @@ const show_tags = useState('show_tags', () => false);
 /*     justify-content: center;  */
 /*     width: 100%;  */
 /* } */
-.bordered-link {
-    text-decoration: none; /* Remove underline */
-    /* color: #007BFF;  */
-    padding: 5px 15px; /* Padding around the link */
-    border: 2px solid #007BFF; /* Border color and thickness */
-    border-radius: 5px; /* Rounded corners */
-    border-color : var(--border-color) ;
-    display: block; 
-        width: fit-content; /* Make the link only as wide as its content */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
-    margin-right:10px;
-    cursor: pointer;
-}
 </style>

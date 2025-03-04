@@ -8,7 +8,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "deploy" : "NUXT_APP_BASE_URL=/meditations/ npx nuxt build --preset github_pages ;  npx gh-pages --dotfiles -d .output/public" ,
+    "deployx" : "NUXT_APP_BASE_URL=/meditations/ npx nuxt build --preset github_pages ;  npx gh-pages --dotfiles -d .output/public" ,
+    "deploy" : "npx nuxt build --preset github_pages ;  npx gh-pages --dotfiles -d .output/public" ,
     "serve" : "nuxt generate ; serve .output/public"
   },
   "dependencies": {
